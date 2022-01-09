@@ -1,5 +1,20 @@
-#bloc_page {
-  background-color: aquamarine;
+@charset "UTF-8";
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  /*-- Eléments principaux de la page --*/
+  /*-- header --*/
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*-- Main --*/
+  .recherche {
+    display: flex;
+    justify-content: center;
+  }
+  .recherche__i {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

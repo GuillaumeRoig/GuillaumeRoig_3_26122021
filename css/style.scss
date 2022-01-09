@@ -1,3 +1,26 @@
+@media only screen and (min-width: 321px) and (max-width: 600px)
+{
+
+/*-- Eléments principaux de la page --*/
 #bloc_page{
-    background-color: aquamarine;
+    
+}
+
+/*-- header --*/
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+}
+
+/*-- Main --*/
+
+.recherche{
+    display: flex;
+    justify-content: center;
+    &__i{
+        flex-direction: column;
+    }
+}
 }
