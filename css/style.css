@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*-- Police Logo et Titres font-family: 'Shrikhand', cursive; --*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/*-- Police texte  font-family: 'Roboto', sans-serif; --*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   /*-- Eléments principaux de la page --*/
   /*-- header --*/
@@ -6,15 +11,72 @@
     display: flex;
     justify-content: center;
   }
+  .logo img {
+    width: 165px;
+    height: 31px;
+  }
 
   /*-- Main --*/
-  .recherche {
+  /*-- Bloc 1--*/
+  .position {
+    font-family: "Roboto", sans-serif;
+    border: 2px solid #eaeaea;
+    background-color: #eaeaea;
+    width: auto;
     display: flex;
     justify-content: center;
+    align-items: baseline;
   }
-  .recherche__i {
-    flex-direction: column;
+
+  .bloc_1 {
+    font-family: "Roboto", sans-serif;
+    border: 2px solid #f6f6f6;
+    background-color: #f6f6f6;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .bloc_1 h1 {
+    font-size: 25px;
+  }
+  .bloc_1 p {
+    font-size: 18px;
+  }
+
+  .bouton_explorer {
+    width: 222px;
+    height: 46px;
+    text-decoration: none;
+    background-color: #FF79DA;
+    text-align: center;
+    color: #ffff;
+    border: 1px solid #FF79DA;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 3px 3px 20px #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/*-- Bloc 2 --*/
+.bloc_2 {
+  font-family: "Roboto", sans-serif;
+}
+.bloc_2 h2 {
+  font-size: 25px;
+}
+.bloc_2 ul {
+  padding-left: 0;
+}
+
+.bloc_2_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bloc_2_item a {
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=style.css.map */
