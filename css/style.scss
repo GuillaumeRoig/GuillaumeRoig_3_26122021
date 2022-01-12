@@ -1,6 +1,6 @@
-/*-- Police Logo et Titres font-family: 'Shrikhand', cursive; --*/
+/*-- Police Logo et Titres / font-family: 'Shrikhand', cursive; --*/
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-/*-- Police texte  font-family: 'Roboto', sans-serif; --*/
+/*-- Police texte /  font-family: 'Roboto', sans-serif; --*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
@@ -12,8 +12,9 @@ $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 
 /*-- Eléments principaux de la page --*/
-#bloc_page{
-    
+#bloc_page
+{
+    width: 100%;
 }
 
 /*-- header --*/
@@ -32,7 +33,8 @@ $tertiary_color: #99E2D0;
 /*-- Main --*/
 /*-- Bloc 1--*/
 
-.position{
+.position
+{
     font-family: 'Roboto', sans-serif;
     border: 2px solid #eaeaea;
     background-color: #eaeaea;
@@ -40,12 +42,18 @@ $tertiary_color: #99E2D0;
     display: flex;
     justify-content: center;
     align-items: baseline;
+    p
+    {
+        text-align: center;
+        font-weight: bold;
+    }
     i{
         padding-right: 5%;
     }
-   }
+}
 
-.bloc_1{
+.bloc_1
+{
     font-family: 'Roboto', sans-serif;
     border: 2px solid #f6f6f6;
     background-color: #f6f6f6;
@@ -55,17 +63,21 @@ $tertiary_color: #99E2D0;
     justify-content: center;
     h1{
         font-size: 25px;
+        text-align: center;
+        margin-top: 10%;
     }
     p{
         font-size: 18px;
+        text-align: center;
     }
     a:hover{
             background-color: $primary_color;
             border-color: $primary_color;
     }
-    }
+}
 
-.bouton_explorer{
+.bouton_explorer
+{
     width: 222px; 
     height: 46px;
     text-decoration: none;
@@ -78,32 +90,38 @@ $tertiary_color: #99E2D0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10%;
-}
+    margin-top: 5%;
+    margin-bottom: 15%;
 }
 
 /*-- Bloc 2 --*/
 
-.bloc_2{
+.bloc_2
+{
     font-family: 'Roboto', sans-serif;
-    h2{
+    h2
+    {
         font-size: 25px;
-        margin-left: 5%;
+        margin-left: 4%;
     }
-    ul{
+    ul
+    {
         padding-left: 0;
     }    
 }
 
-.bloc_2_item{
+.bloc_2_item
+{
     display: flex;
     flex-direction: column;
     align-items: center;
-    :hover{
+    :hover
+    {
         background-color: #f5edff;
         border-color: #f5edff;
     }
-    a{
+    a
+    {
         font-size: 17px;
         width: 321px; 
         height: 66px;
@@ -118,19 +136,127 @@ $tertiary_color: #99E2D0;
         align-items: center;
         margin-bottom: 6%;
     }
-    span{
+    span
+    {
         padding-right: 10%;
         color: #7e7e7e;
-        :hover{
+        :hover
+        {
             color: #9356DC;
         }
     }
-    b{
+    b
+    {
         padding-right: 5%;
     }
-
+}
 
 /*-- Bloc 3 --*/
 
+.bloc_3{
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #f6f6f6;
+    background-color: #f6f6f6;
+    h2{
+        font-size: 25px;
+        margin-left: 4%;
+        margin-top: 10%;
+    }
+    ul{
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 
+.card
+{
+    width: 340px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #ffff;
+    margin-bottom: 5%;
+    box-shadow: 3px 5px 20px #d6d6d6;
+    a
+    {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.card_image img
+{
+    width: 340px;
+    height: 145px;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+    position: relative;
+}
+
+.card_body
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_title
+{
+    margin-left: 5%;
+    h3
+    {
+        margin: 5% 0 0 0;
+    }
+    p
+    {
+        margin: 2% 0 6% 0;
+    }
+}
+
+.card_heart
+{
+    font-size: 25px;
+    margin-right: 5%;
+    :hover
+    {
+        color: $primary_color;
+    }
+}
+
+/*-- Footer --*/
+
+.bas_de_page
+{
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #353535;
+    background-color: #353535;
+    color: #fff;
+    width: auto;
+    margin-left: 4%;
+    h3
+    {
+        font-weight: 200;
+        font-size: 20px;
+        font-family: 'Shrikhand', cursive;
+    }
+    ul
+    {
+        list-style-type: none;
+        padding-left: 0%;
+        a
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    li
+    {
+        margin-bottom: 2%;
+        i
+        {
+            padding-right: 3%;
+        }
+    }
+}
 }
