@@ -27,7 +27,7 @@
 
   /*-- Main --*/
   /*-- Bloc 1--*/
-  .position {
+  .location {
     font-family: "Roboto", sans-serif;
     border: 2px solid #eaeaea;
     background-color: #eaeaea;
@@ -36,15 +36,15 @@
     justify-content: center;
     align-items: baseline;
   }
-  .position p {
+  .location p {
     text-align: center;
     font-weight: bold;
   }
-  .position i {
+  .location i {
     padding-right: 5%;
   }
 
-  .bloc_1 {
+  .exploration {
     font-family: "Roboto", sans-serif;
     border: 2px solid #f6f6f6;
     background-color: #f6f6f6;
@@ -53,21 +53,21 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .bloc_1 h1 {
+  .exploration h1 {
     font-size: 25px;
     text-align: center;
     margin-top: 10%;
   }
-  .bloc_1 p {
+  .exploration p {
     font-size: 18px;
     text-align: center;
   }
-  .bloc_1 a:hover {
+  .exploration a:hover {
     background-color: #9356DC;
     border-color: #9356DC;
   }
 
-  .bouton_explorer {
+  .explore_button {
     width: 222px;
     height: 46px;
     text-decoration: none;
@@ -85,29 +85,29 @@
   }
 
   /*-- Bloc 2 --*/
-  .bloc_2 {
+  .functioning {
     font-family: "Roboto", sans-serif;
   }
-  .bloc_2 h2 {
+  .functioning h2 {
     font-size: 25px;
     margin-left: 4%;
   }
-  .bloc_2 ul {
+  .functioning ul {
     padding-left: 0;
   }
-  .bloc_2 .bloc_2_item {
+  .functioning .functioning_item {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .bloc_2 .bloc_2_item :hover {
+  .functioning .functioning_item :hover {
     background-color: #f5edff;
     border-color: #f5edff;
   }
-  .bloc_2 .bloc_2_item :hover > span {
+  .functioning .functioning_item :hover > span {
     color: #9356DC;
   }
-  .bloc_2 .bloc_2_item a {
+  .functioning .functioning_item a {
     font-size: 17px;
     width: 321px;
     height: 66px;
@@ -122,26 +122,26 @@
     align-items: center;
     margin-bottom: 6%;
   }
-  .bloc_2 .bloc_2_item span {
+  .functioning .functioning_item span {
     padding-right: 10%;
     color: #7e7e7e;
   }
-  .bloc_2 .bloc_2_item b {
+  .functioning .functioning_item b {
     padding-right: 5%;
   }
 
   /*-- Bloc 3 --*/
-  .bloc_3 {
+  .restaurant {
     font-family: "Roboto", sans-serif;
     border: 2px solid #f6f6f6;
     background-color: #f6f6f6;
   }
-  .bloc_3 h2 {
+  .restaurant h2 {
     font-size: 25px;
     margin-left: 4%;
     margin-top: 10%;
   }
-  .bloc_3 ul {
+  .restaurant ul {
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -160,36 +160,32 @@
     text-decoration: none;
     color: black;
   }
-
-  .card_image img {
+  .card .card_image img {
     width: 340px;
     height: 145px;
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
     position: relative;
   }
-
-  .card_body {
+  .card .card_body {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
-  .card_title {
+  .card .card_title {
     margin-left: 5%;
   }
-  .card_title h3 {
+  .card .card_title h3 {
     margin: 5% 0 0 0;
   }
-  .card_title p {
+  .card .card_title p {
     margin: 2% 0 6% 0;
   }
-
-  .card_heart {
+  .card .card_heart {
     font-size: 25px;
     margin-right: 5%;
   }
-  .card_heart :hover {
+  .card .card_heart :hover {
     background-color: #9356DC;
     color: #9356DC;
   }

@@ -30,7 +30,8 @@ body
     display: flex;
     justify-content: center;
     margin: 5% 0 3% 0;
-    img{
+    img
+    {
         width: 165px;
         height: 31px;
     }
@@ -39,7 +40,7 @@ body
 /*-- Main --*/
 /*-- Bloc 1--*/
 
-.position
+.location
 {
     font-family: 'Roboto', sans-serif;
     border: 2px solid #eaeaea;
@@ -59,7 +60,7 @@ body
     }
 }
 
-.bloc_1
+.exploration
 {
     font-family: 'Roboto', sans-serif;
     border: 2px solid #f6f6f6;
@@ -86,7 +87,7 @@ body
     }
 }
 
-.bouton_explorer
+.explore_button
 {
     width: 222px; 
     height: 46px;
@@ -106,7 +107,7 @@ body
 
 /*-- Bloc 2 --*/
 
-.bloc_2
+.functioning
 {
     font-family: 'Roboto', sans-serif;
     h2
@@ -118,7 +119,7 @@ body
     {
         padding-left: 0;
     }
-    .bloc_2_item
+    .functioning_item
     {
         display: flex;
         flex-direction: column;
@@ -162,7 +163,8 @@ body
 
 /*-- Bloc 3 --*/
 
-.bloc_3{
+.restaurant
+{
     font-family: 'Roboto', sans-serif;
     border: 2px solid #f6f6f6;
     background-color: #f6f6f6;
@@ -192,47 +194,47 @@ body
         text-decoration: none;
         color: black;
     }
-}
-
-.card_image img
-{
-    width: 340px;
-    height: 145px;
-    border-radius: 15px 15px 0px 0px;
-    object-fit: cover;
-    position: relative;
-}
-
-.card_body
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card_title
-{
-    margin-left: 5%;
-    h3
+    .card_image img
     {
-        margin: 5% 0 0 0;
+        width: 340px;
+        height: 145px;
+        border-radius: 15px 15px 0px 0px;
+        object-fit: cover;
+        position: relative;
     }
-    p
+
+    .card_body
     {
-        margin: 2% 0 6% 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card_title
+    {
+        margin-left: 5%;
+        h3
+        {
+            margin: 5% 0 0 0;
+        }
+        p
+        {
+            margin: 2% 0 6% 0;
+        }
+    }
+
+    .card_heart
+    {
+        font-size: 25px;
+        margin-right: 5%;
+        :hover
+        {
+            background-color: $primary_color;
+            color: $primary_color;
+        }
     }
 }
 
-.card_heart
-{
-    font-size: 25px;
-    margin-right: 5%;
-    :hover
-    {
-        background-color: $primary_color;
-        color: $primary_color;
-    }
-}
 
 /*-- Footer --*/
 
