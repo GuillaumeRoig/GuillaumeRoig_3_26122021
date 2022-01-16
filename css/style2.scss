@@ -20,22 +20,14 @@ $tertiary_color: #99E2D0;
 body
 {
     margin: 0;
-    @include phone
-    {
-        margin: 0;
-    }
 }
 
 #bloc_page
 {
-    display: flex;
+    /*-- display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; --*/
     width: 100%;
-    @include phone
-    {
-        width: 100%;
-    }
 }
 
 /*-- header --*/
@@ -48,8 +40,8 @@ body
     @include phone
     {
         display: flex;
-        justify-content: center;
-        margin: 5% 0 3% 0;
+        justify-content: space-around;
+        margin-top: 5%;
     }
     i
     {
@@ -57,24 +49,33 @@ body
         color: black;
         @include phone
         {
-            text-decoration: none;
             color: black;
         }
     }
     img
     {
-        padding-left: 5%;
         width: 220px;
         height: 80px;
         @include phone
         {
             width: 165px;
             height: 31px;
+            padding-right: 20%;
         }
     }
 }
 
 /*-- main --*/
+
+#main
+{
+    border: 2px solid #f6f6f6;
+    background-color: #f6f6f6;
+    @include phone
+    {
+        border-radius: 25px 25px 0 0;
+    }
+}
 
 .image img
 {
@@ -86,8 +87,154 @@ body
     @include phone
     {
         width: 100%;
-        height: 250px;
-        object-fit: cover;
-        position: relative;
+        border-radius: 0;
+    }    
+}
+
+.title
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Shrikhand', cursive;
+    @include phone
+    {
+        font-size: 13px;
+    }
+    i
+    {
+        font-size: 25px;
+        @include phone
+        {
+            font-size: 22px;
+        }
+    }
+}
+
+.menu
+{
+    font-family: 'Roboto', sans-serif;
+    @include phone
+    {
+        width: 100%;
+        padding-left: 4%;
+    }
+    .meal
+    {
+        font-weight: normal;
+        box-sizing: border-box;
+        width: 10%;
+        border-bottom: 3px solid $tertiary_color;
+        padding-bottom: 1%;
+        h3
+        {
+            @include phone
+            {
+                font-size: 18px;
+            }
+        }
+    }
+}
+ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+.card
+{
+    width: 400px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #ffff;
+    margin-bottom: 5%;
+    box-shadow: 3px 5px 20px #d6d6d6;
+    @include phone
+    {
+        width: 345px;
+    }
+    .body_menu
+    {
+        padding: 3% 0 0 3%;
+        h3
+        {
+            margin: 0;
+            @include phone
+            {
+                font-size: 18px
+            }
+        }
+    }
+    .body_price
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 5% 3% 3%;
+        @include phone
+            {
+                font-size: 15px
+            }
+    }
+}
+
+.order
+{
+    display: flex;
+    justify-content: center;
+    &_button
+    {
+        width: 222px; 
+        height: 46px;
+        text-decoration: none;
+        background: linear-gradient(to top left, $primary_color, $secondary_color);
+        text-align: center;
+        color: #ffff;
+        border: 1px solid linear-gradient(to top left, $primary_color, $secondary_color);
+        border-radius: 30px 30px 30px 30px;
+        box-shadow: 3px 5px 20px #d6d6d6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 15%;
+    }
+}
+
+/*-- footer --*/
+
+.bas_de_page
+{
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #353535;
+    background-color: #353535;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding-left: 4%;
+    h3
+    {
+        font-weight: 200;
+        font-size: 22px;
+        font-family: 'Shrikhand', cursive;
+        @include phone
+        {
+            font-size: 20px;
+        }
+    }
+    ul
+    {
+        list-style-type: none;
+        padding-left: 0%;
+        a
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    li
+    {
+        margin-bottom: 2%;
+        i
+        {
+            padding-right: 3%;
+        }
     }
 }
