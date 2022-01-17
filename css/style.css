@@ -15,10 +15,13 @@
   }
 
   /*-- header --*/
+  header {
+    margin: 5% 0 3% 0;
+  }
+
   .logo {
     display: flex;
     justify-content: center;
-    margin: 5% 0 3% 0;
   }
   .logo img {
     width: 165px;
@@ -28,6 +31,7 @@
   /*-- Main --*/
   /*-- Bloc 1--*/
   .location {
+    box-shadow: 0px -3px 2px #d6d6d6;
     font-family: "Roboto", sans-serif;
     border: 2px solid #eaeaea;
     background-color: #eaeaea;
@@ -115,6 +119,8 @@
     color: #fff;
     font-size: 12px;
     margin-right: 8%;
+    position: absolute;
+    left: -12px;
   }
   .functioning_item a {
     font-size: 17px;
@@ -130,9 +136,10 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 6%;
+    position: relative;
   }
   .functioning_item span {
-    padding-right: 8%;
+    padding: 0 5% 0 10%;
     color: #7e7e7e;
   }
   .functioning_item b {
@@ -169,6 +176,9 @@
     text-decoration: none;
     color: black;
   }
+  .card_image {
+    position: relative;
+  }
   .card_image img {
     width: 340px;
     height: 145px;
@@ -185,15 +195,13 @@
     color: #008766;
     padding: 1% 3% 1% 3%;
     position: absolute;
-    right: 7%;
+    right: 5%;
+    top: 10%;
   }
   .card_body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  .card_title {
-    margin-left: 5%;
   }
   .card_title h3 {
     margin: 5% 0 0 0;
@@ -205,7 +213,7 @@
     font-size: 25px;
     margin-right: 5%;
   }
-  .card_heart :active {
+  .card_heart_heart a :active {
     background-color: #9356DC;
     color: #9356DC;
   }
@@ -213,6 +221,7 @@
   /*-- Footer --*/
   .bas_de_page {
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
     border: 2px solid #353535;
     background-color: #353535;
     color: #fff;
@@ -227,7 +236,7 @@
   }
   .bas_de_page ul {
     list-style-type: none;
-    padding-left: 0%;
+    padding-left: 0;
   }
   .bas_de_page ul a {
     text-decoration: none;

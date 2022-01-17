@@ -24,18 +24,21 @@ body
 
 #bloc_page
 {
-    /*-- display: flex;
-    flex-direction: column;
-    align-items: center; --*/
     width: 100%;
 }
 
 /*-- header --*/
 
+header
+{
+    margin: 5% 0 3% 0;
+}
+
 .logo
 {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 2% 0 3% 0;
     @include phone
     {
@@ -73,22 +76,29 @@ body
     background-color: #f6f6f6;
     @include phone
     {
-        border-radius: 25px 25px 0 0;
+        border-radius: 40px 40px 0 0;
+        margin-top: -10%;
     }
 }
 
-.image img
+.image
 {
-    width: 500px;
-    height: 250px;
-    border-radius: 15px 15px 15px 15px;
-    object-fit: cover;
-    position: relative;
-    @include phone
+    display: flex;
+    justify-content: center;
+    & img
     {
-        width: 100%;
-        border-radius: 0;
-    }    
+        width: 500px;
+        height: 250px;
+        border-radius: 15px 15px 15px 15px;
+        object-fit: cover;
+        position: relative;
+        @include phone
+        {
+            width: 100%;
+            border-radius: 0;
+            z-index: -1;
+        }    
+    }
 }
 
 .title
@@ -117,7 +127,6 @@ body
     @include phone
     {
         width: 100%;
-        padding-left: 4%;
     }
     .meal
     {
@@ -126,6 +135,7 @@ body
         width: 10%;
         border-bottom: 3px solid $tertiary_color;
         padding-bottom: 1%;
+        padding-left: 4%;
         h3
         {
             @include phone
@@ -139,6 +149,9 @@ ul
 {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card
 {
@@ -147,6 +160,7 @@ ul
     background-color: #ffff;
     margin-bottom: 5%;
     box-shadow: 3px 5px 20px #d6d6d6;
+    padding-left: 0;
     @include phone
     {
         width: 345px;
@@ -203,6 +217,7 @@ ul
 .bas_de_page
 {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
     border: 2px solid #353535;
     background-color: #353535;
     color: #fff;
@@ -220,9 +235,9 @@ ul
         }
     }
     ul
-    {
+    {   display: block;
         list-style-type: none;
-        padding-left: 0%;
+        padding-left: 0;
         a
         {
             text-decoration: none;
