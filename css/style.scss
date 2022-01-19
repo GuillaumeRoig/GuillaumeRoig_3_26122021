@@ -4,12 +4,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-@media only screen and (min-width: 321px) and (max-width: 600px)
-{
 
 $primary_color: #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
+
+@mixin phone {
+    @media only screen and (min-width: 321px) and (max-width: 600px){
+        @content;
+    }  
+}
 
 /*-- Eléments principaux de la page --*/
 
@@ -27,19 +31,28 @@ body
 
 header
 {
-    margin: 5% 0 3% 0;
+    margin: 3% 0 3% 0;
+    @include phone
+    {
+        margin-top: 5%;
+    }
     
 }
 
 .logo
 {
     display: flex;
-    justify-content: center;
-    img
-    {
-        width: 165px;
-        height: 31px;
-    }
+    justify-content: center;  
+        img
+        {
+            width: 220px;
+            height: 80px;
+            @include phone
+            {
+                width: 165px;
+                height: 31px;
+            }
+        }    
 }
 
 /*-- Main --*/
@@ -55,6 +68,11 @@ header
     display: flex;
     justify-content: center;
     align-items: baseline;
+    font-size: 20px;
+    @include phone
+    {
+        font-size: 15px;
+    }
     p
     {
         text-align: center;
@@ -62,7 +80,11 @@ header
     }
     i
     {
-        padding-right: 5%;
+        padding-right: 2%;
+        @include phone
+        {
+            padding-right: 5%;
+        }
     }
 }
 
@@ -73,25 +95,43 @@ header
     background-color: #f6f6f6;
     width: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    @include phone
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     h1
     {
-        font-size: 25px;
+        font-size: 35px;
         text-align: center;
-        margin-top: 10%;
+        margin-top: 5%;
+        @include phone
+        {
+            margin-top: 10%;
+            font-size: 25px;
+        }
     }
     p
     {
-        font-size: 18px;
+        font-size: 20px;
         text-align: center;
+        @include phone
+        {
+            font-size: 18px;
+        }
     }
 }
 
 .explore_button
 {
-    width: 222px; 
-    height: 46px;
+    width: 285px; 
+    height: 67px;
+    font-size: 20px;
     text-decoration: none;
     background: linear-gradient(to top left, $primary_color, $secondary_color);
     text-align: center;
@@ -102,8 +142,14 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
-    margin-bottom: 15%;
+    margin: 5% 0 5% 0;
+    @include phone
+    {
+        width: 201px; 
+        height: 46px;
+        font-size: 15px;
+        margin-bottom: 15%;
+    }
 }
 
 /*-- Bloc 2 --*/
@@ -113,8 +159,17 @@ header
     font-family: 'Roboto', sans-serif;
     h2
     {
-        font-size: 25px;
-        margin-left: 4%;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        margin-bottom: 5%;
+        @include phone
+        {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 25px;
+            margin: 5% 0 0 4%;
+        }
     }
     ul
     {
@@ -123,8 +178,13 @@ header
     &_item
     {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-around;
+        @include phone
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         :hover
         {
             background-color: #f5edff;
@@ -139,22 +199,28 @@ header
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            height: 20px;
-            width: 20px;
+            height: 30px;
+            width: 30px;
             background-color: $primary_color;
             border: 1px solid $primary_color;
             border-radius: 50%;
             color: #fff;
-            font-size: 12px;
+            font-size: 16px;
             margin-right: 8%;
             position: absolute;
             left: -12px;
+            @include phone
+            {
+                width: 20px;
+                height: 20px;
+                font-size: 12px;
+            }
         }
         a
         {
-            font-size: 17px;
-            width: 321px; 
-            height: 66px;
+            font-size: 20px;
+            width: 350px;
+            height: 92px;
             text-decoration: none;
             background-color: #f7f7f7;
             text-align: center;
@@ -166,6 +232,12 @@ header
             align-items: center;
             margin-bottom: 6%;
             position: relative;
+            @include phone
+            {
+                width: 286px;
+                height: 66px;
+                font-size: 17px;
+            }
         }
         span
         {
@@ -187,26 +259,45 @@ header
     border: 2px solid #f6f6f6;
     background-color: #f6f6f6;
     h2{
-        font-size: 25px;
-        margin-left: 4%;
-        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        margin: 3% 0 5% 0;
+        @include phone
+        {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 25px;
+            margin: 10% 0 0 4%;
+        }
     }
     ul{
         padding: 0;
         list-style-type: none;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        margin-bottom: 3%;
+        @include phone
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 0;
+        }
     }
 }
 
 .card
 {
-    width: 340px;
+    width: 323px;
     border-radius: 15px 15px 15px 15px;
     background-color: #ffff;
     margin-bottom: 5%;
     box-shadow: 3px 5px 20px #d6d6d6;
+    @include phone
+    {
+        width: 296px;
+    }
     a
     {
         text-decoration: none;
@@ -218,16 +309,20 @@ header
     }
     &_image img
     {
-        width: 340px;
+        width: 323px;
         height: 145px;
         border-radius: 15px 15px 0px 0px;
         object-fit: cover;
         position: relative;
+        @include phone
+        {
+            width: 296px;
+        }
     }
     .image_text
     {
         font-family: 'Roboto', sans-serif;
-        font-size: 12px;
+        font-size: 15px;
         font-weight: bold;
         border: 1px solid $tertiary_color;
         background-color: $tertiary_color;
@@ -236,6 +331,10 @@ header
         position: absolute;
         right: 5%;
         top: 10%;
+        @include phone
+        {
+            font-size: 12px;
+        }
     }
     &_body
     {
@@ -247,11 +346,21 @@ header
     {
         h3
         {
+            font-size: 20px;
             margin: 5% 0 0 0;
+            @include phone
+            {
+                font-size: 18px;
+            }
         }
         p
         {
+            font-size: 18px;
             margin: 2% 0 6% 0;
+            @include phone
+            {
+                font-size: 15px;
+            }
         }
     }
     &_heart
@@ -277,14 +386,29 @@ header
     padding-left: 4%;
     h3
     {
+        display: flex;
+        justify-content: center;
         font-weight: 200;
-        font-size: 20px;
+        font-size: 25px;
         font-family: 'Shrikhand', cursive;
+        @include phone
+        {
+            font-size: 20px;
+        }
     }
     ul
     {
+        font-size: 18px;
+        display: flex;
+        justify-content: space-evenly;
         list-style-type: none;
-        padding-left: 0;
+        padding-left: 0; 
+        margin-bottom: 5%;
+        @include phone
+        {
+            display: block;
+            font-size: 15px;
+        }
         a
         {
             text-decoration: none;
@@ -293,11 +417,20 @@ header
     }
     li
     {
-        margin-bottom: 2%;
+        margin-top: 2%;
+        @include phone
+        {
+            margin: 0 0 2% 0;
+        }
         i
         {
-            padding-right: 3%;
+            padding-right: 4%;
+            font-size: 17px;
+            @include phone
+            {
+                font-size: 10px;
+                padding-right: 3%;
+            }
         }
     }
-}
 }

@@ -221,7 +221,7 @@ ul {
   display: flex;
   justify-content: center;
   font-weight: 200;
-  font-size: 22px;
+  font-size: 25px;
   font-family: "Shrikhand", cursive;
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
