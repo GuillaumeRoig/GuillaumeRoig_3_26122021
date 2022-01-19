@@ -21,13 +21,14 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 2% 0 3% 0;
+  justify-content: space-evenly;
+  margin: 2% 25% 3% 0;
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .logo {
     display: flex;
     justify-content: space-around;
+    margin-right: 0;
     margin-top: 5%;
   }
 }
@@ -69,14 +70,14 @@ header {
   justify-content: center;
 }
 .image img {
-  width: 500px;
-  height: 250px;
+  width: 1225px;
   border-radius: 15px 15px 15px 15px;
-  object-fit: cover;
+  object-fit: contain;
   position: relative;
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .image img {
+    object-fit: cover;
     width: 100%;
     border-radius: 0;
     z-index: -1;
@@ -86,19 +87,22 @@ header {
 .title {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   font-family: "Shrikhand", cursive;
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .title {
+    justify-content: space-around;
     font-size: 13px;
   }
 }
 .title i {
+  margin-left: 5%;
   font-size: 25px;
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .title i {
+    margin-left: 0;
     font-size: 22px;
   }
 }
@@ -114,10 +118,15 @@ header {
 .menu .meal {
   font-weight: normal;
   box-sizing: border-box;
-  width: 10%;
+  width: 2%;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 1%;
-  padding-left: 4%;
+  margin-left: 4%;
+}
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .menu .meal {
+    width: 10%;
+  }
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .menu .meal h3 {
@@ -128,9 +137,17 @@ header {
 ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 3%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  ul {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .card {
@@ -201,6 +218,8 @@ ul {
   padding-left: 4%;
 }
 .bas_de_page h3 {
+  display: flex;
+  justify-content: center;
   font-weight: 200;
   font-size: 22px;
   font-family: "Shrikhand", cursive;
@@ -211,19 +230,30 @@ ul {
   }
 }
 .bas_de_page ul {
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 5%;
+}
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .bas_de_page ul {
+    display: block;
+  }
 }
 .bas_de_page ul a {
   text-decoration: none;
   color: #fff;
 }
-.bas_de_page li {
-  margin-bottom: 2%;
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .bas_de_page li {
+    margin-bottom: 2%;
+  }
 }
-.bas_de_page li i {
-  padding-right: 3%;
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .bas_de_page li i {
+    padding-right: 3%;
+  }
 }
 
 /*# sourceMappingURL=style2.css.map */

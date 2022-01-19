@@ -201,7 +201,7 @@
   .card_body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .card_title h3 {
     margin: 5% 0 0 0;
@@ -210,12 +210,9 @@
     margin: 2% 0 6% 0;
   }
   .card_heart {
+    padding-left: 25%;
     font-size: 25px;
     margin-right: 5%;
-  }
-  .card_heart_heart a :active {
-    background-color: #9356DC;
-    color: #9356DC;
   }
 
   /*-- Footer --*/

@@ -241,7 +241,7 @@ header
     {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     &_title
     {
@@ -256,16 +256,9 @@ header
     }
     &_heart
     {
+        padding-left: 25%;
         font-size: 25px;
         margin-right: 5%;
-        &_heart a
-        {
-        :active 
-        {
-            background-color: $primary_color;
-            color: $primary_color;
-        }
-        }
     }
 }
 

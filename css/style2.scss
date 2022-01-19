@@ -38,12 +38,13 @@ header
 {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 2% 0 3% 0;
+    justify-content: space-evenly;
+    margin: 2% 25% 3% 0;
     @include phone
     {
         display: flex;
         justify-content: space-around;
+        margin-right: 0;
         margin-top: 5%;
     }
     i
@@ -87,13 +88,13 @@ header
     justify-content: center;
     & img
     {
-        width: 500px;
-        height: 250px;
+        width: 1225px;
         border-radius: 15px 15px 15px 15px;
-        object-fit: cover;
+        object-fit: contain;
         position: relative;
         @include phone
         {
+            object-fit: cover;
             width: 100%;
             border-radius: 0;
             z-index: -1;
@@ -105,17 +106,20 @@ header
 {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     font-family: 'Shrikhand', cursive;
     @include phone
     {
+        justify-content: space-around;
         font-size: 13px;
     }
     i
     {
+        margin-left: 5%;
         font-size: 25px;
         @include phone
         {
+            margin-left: 0;
             font-size: 22px;
         }
     }
@@ -132,10 +136,14 @@ header
     {
         font-weight: normal;
         box-sizing: border-box;
-        width: 10%;
+        width: 2%;
         border-bottom: 3px solid $tertiary_color;
         padding-bottom: 1%;
-        padding-left: 4%;
+        margin-left: 4%;
+        @include phone
+        {
+            width: 10%;
+        }
         h3
         {
             @include phone
@@ -149,9 +157,16 @@ ul
 {
     list-style-type: none;
     padding: 0;
+    margin-top: 3%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    @include phone
+    {
+        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 .card
 {
@@ -226,6 +241,8 @@ ul
     padding-left: 4%;
     h3
     {
+        display: flex;
+        justify-content: center;
         font-weight: 200;
         font-size: 22px;
         font-family: 'Shrikhand', cursive;
@@ -235,9 +252,16 @@ ul
         }
     }
     ul
-    {   display: block;
+    {
+        display: flex;
+        justify-content: space-evenly;
         list-style-type: none;
-        padding-left: 0;
+        padding-left: 0; 
+        margin-bottom: 5%;
+        @include phone
+        {
+            display: block;
+        }
         a
         {
             text-decoration: none;
@@ -246,10 +270,16 @@ ul
     }
     li
     {
-        margin-bottom: 2%;
+        @include phone
+        {
+            margin-bottom: 2%;
+        }
         i
         {
-            padding-right: 3%;
+            @include phone
+            {
+                padding-right: 3%;
+            }   
         }
     }
 }
