@@ -4,8 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-@import url("/css/button.scss");
-
 $primary_color: #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
@@ -378,6 +376,17 @@ a.explore_button:hover
         font-size: 25px;
         margin-right: 5%;
     }
+}
+.flow:hover
+{
+    animation: fill 1s ease-in-out;
+    display: inline-block;
+    opacity: 1;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 }
 
 
