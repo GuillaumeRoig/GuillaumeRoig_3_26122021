@@ -3,19 +3,9 @@
 /*-- Police texte /  font-family: 'Roboto', sans-serif; --*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
 @import "./Components/button.scss";
-
-$primary_color: #9356DC;
-$secondary_color: #FF79DA;
-$tertiary_color: #99E2D0;
-$bi_color: linear-gradient(to top left, $primary_color, $secondary_color);
-
-@mixin phone {
-    @media only screen and (min-width: 321px) and (max-width: 600px){
-        @content;
-    }  
-}
+@import "./Utils/variables";
+@import "./Utils/mixins";
 
 /*-- Eléments principaux de la page --*/
 
@@ -458,4 +448,18 @@ a.explore_button:hover
             }
         }
     }
+    .knife
+    {
+        @include phone
+        {
+            font-size: 17px;
+        }
+    }
+    .hand
+    {
+        @include phone
+        {
+            font-size: 11px;
+        }
+    }    
 }

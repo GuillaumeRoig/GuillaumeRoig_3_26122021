@@ -430,5 +430,15 @@ a.explore_button:hover {
     padding-right: 3%;
   }
 }
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .bas_de_page .knife {
+    font-size: 17px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .bas_de_page .hand {
+    font-size: 11px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
