@@ -1,6 +1,6 @@
 .loader
 {
-    background: #f6f6f6;
+    background: linear-gradient(to top left, #eaeaea, #353535);
     position: fixed;
     z-index: 9999;
     top: 0px;
@@ -22,35 +22,5 @@
     margin: auto;
     position: absolute;
     /*--direction--*/ top: 0; right: 0; bottom: 0; left: 0;
-    }
-}
-
-@keyframes loader{
-    0%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes spin{
-    0%{
-        -webkit-transform: rotate(0deg);
-    }
-    100%{
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
     }
 }

@@ -4,6 +4,64 @@
 /*-- Police texte /  font-family: 'Roboto', sans-serif; --*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  35% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*-- Eléments principaux de la page --*/
 body {
   margin: 0;
@@ -15,7 +73,7 @@ body {
 
 /*-- header --*/
 header {
-  margin: 5% 0 3% 0;
+  margin: 2% 0 2% 0;
 }
 
 .logo {
@@ -57,12 +115,8 @@ header {
 #main {
   border: 2px solid #f6f6f6;
   background-color: #f6f6f6;
-}
-@media only screen and (min-width: 321px) and (max-width: 600px) {
-  #main {
-    border-radius: 40px 40px 0 0;
-    margin-top: -10%;
-  }
+  border-radius: 40px 40px 0 0;
+  margin-top: -10%;
 }
 
 .image {
@@ -70,17 +124,18 @@ header {
   justify-content: center;
 }
 .image img {
-  max-width: 779px;
-  border-radius: 15px 15px 15px 15px;
-  object-fit: contain;
+  max-width: auto;
+  border-radius: 15px;
   position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .image img {
-    object-fit: cover;
-    width: 100%;
     border-radius: 0;
-    z-index: -1;
+    height: 280px;
   }
 }
 
@@ -98,13 +153,29 @@ header {
 }
 .title i {
   margin-left: 5%;
-  font-size: 25px;
+  font-size: 28px;
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .title i {
     margin-left: 0;
     font-size: 22px;
   }
+}
+
+.flow {
+  color: black;
+  cursor: pointer;
+}
+
+.flow:hover {
+  animation: fill 1s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .menu {
@@ -134,10 +205,23 @@ header {
   }
 }
 
+.menu_start {
+  animation: fadein 2s ease-in-out;
+}
+
+.menu_middle {
+  animation: fadein 4s ease-in-out;
+}
+
+.menu_end {
+  animation: fadein 6s ease-in-out;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
   margin-top: 3%;
+  margin-bottom: 5%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -152,11 +236,27 @@ ul {
 
 .card {
   width: 400px;
-  border-radius: 15px 15px 15px 15px;
-  background-color: #ffff;
-  margin-bottom: 5%;
-  box-shadow: 3px 5px 20px #d6d6d6;
-  padding-left: 0;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 4px 4px 6px #aaa;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition: padding-right 400ms ease-in-out;
+}
+.card:hover {
+  padding-right: 75px;
+}
+.card:hover .card_check {
+  opacity: 1;
+  transform: translate(-50px);
+}
+.card:hover .fa-check-circle {
+  transform: rotate(360deg);
 }
 @media only screen and (min-width: 321px) and (max-width: 600px) {
   .card {
@@ -183,6 +283,27 @@ ul {
   .card .body_price {
     font-size: 15px;
   }
+}
+
+.card_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 30px;
+  height: 63px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  padding: 20px;
+  right: -50px;
+  top: 0;
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+.card_check .fa-check-circle {
+  color: #fff;
+  transition: transform 500ms ease-in-out;
 }
 
 .order {

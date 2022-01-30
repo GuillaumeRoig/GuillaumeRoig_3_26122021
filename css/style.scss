@@ -7,6 +7,7 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 @import "./Layout/loader";
+@import "./Utils/keyframes";
 
 /*-- Eléments principaux de la page --*/
 
@@ -353,14 +354,22 @@ a.explore_button:hover
     &_heart
     {
         padding-left: 25%;
-        font-size: 12px;
+        font-size: 18px;
         margin-right: 5%;
+        @include phone
+        {
+            font-size: 12px;
+        }
     }
+}
+.flow
+{
+    color: black;
+    cursor: pointer;  
 }
 .flow:hover
 {
-
-    animation: fill 0.3s ease-in-out;
+    animation: fill 1s ease-in-out;
     display: inline-block;
     opacity: 1;
     background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -369,8 +378,6 @@ a.explore_button:hover
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
-
-
 
 /*-- Footer --*/
 

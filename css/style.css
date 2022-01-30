@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 .loader {
-  background: #f6f6f6;
+  background: linear-gradient(to top left, #eaeaea, #353535);
   position: fixed;
   z-index: 9999;
   top: 0px;
@@ -58,6 +58,37 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  35% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*-- Eléments principaux de la page --*/
@@ -396,12 +427,22 @@ a.explore_button:hover {
 }
 .card_heart {
   padding-left: 25%;
-  font-size: 12px;
+  font-size: 18px;
   margin-right: 5%;
+}
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .card_heart {
+    font-size: 12px;
+  }
+}
+
+.flow {
+  color: black;
+  cursor: pointer;
 }
 
 .flow:hover {
-  animation: fill 0.3s ease-in-out;
+  animation: fill 1s ease-in-out;
   display: inline-block;
   opacity: 1;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
