@@ -4,6 +4,62 @@
 /*-- Police texte /  font-family: 'Roboto', sans-serif; --*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.loader {
+  background: #f6f6f6;
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  animation: loader 1s ease-in-out 2s forwards;
+}
+.loader_turn {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  border: 1px solid #d6d6d6;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1.5s linear infinite;
+  -o-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+  margin: auto;
+  position: absolute;
+  /*--direction--*/
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*-- Eléments principaux de la page --*/
 body {
   margin: 0;
@@ -340,12 +396,12 @@ a.explore_button:hover {
 }
 .card_heart {
   padding-left: 25%;
-  font-size: 25px;
+  font-size: 12px;
   margin-right: 5%;
 }
 
 .flow:hover {
-  animation: fill 5s ease-in-out;
+  animation: fill 0.3s ease-in-out;
   display: inline-block;
   opacity: 1;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -353,23 +409,6 @@ a.explore_button:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
-}
-@keyframes flow {
-  0% {
-    transform: scaleX(0);
-  }
-  17% {
-    transform: scaleX(0.18);
-  }
-  24% {
-    transform: scaleX(0.4);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
-  100% {
-    transform: scaleX(1);
-  }
 }
 
 /*-- Footer --*/
@@ -381,7 +420,11 @@ a.explore_button:hover {
   color: #fff;
   width: 100%;
   height: 100%;
-  padding-left: 4%;
+}
+@media only screen and (min-width: 321px) and (max-width: 600px) {
+  .bas_de_page {
+    padding-left: 4%;
+  }
 }
 .bas_de_page h3 {
   display: flex;
