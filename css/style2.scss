@@ -125,8 +125,7 @@ header
     animation: fill 1s ease-in-out;
     display: inline-block;
     opacity: 1;
-    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background: $bi_colors;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;

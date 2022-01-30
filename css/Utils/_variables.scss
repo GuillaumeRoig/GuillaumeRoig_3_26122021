@@ -2,3 +2,4 @@ $primary_color: #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 $bi_color: linear-gradient(to top left, $primary_color, $secondary_color);
+$bi_colors: linear-gradient(to top, $secondary_color, $primary_color);
