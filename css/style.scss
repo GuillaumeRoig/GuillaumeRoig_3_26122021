@@ -282,7 +282,7 @@ a.explore_button:hover
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 0;
+            margin-bottom: 8%;
         }
     }
 }
@@ -438,6 +438,7 @@ a.explore_button:hover
     }
     li
     {
+        display: flex;
         margin-top: 2%;
         @include phone
         {
@@ -445,12 +446,16 @@ a.explore_button:hover
         }
         i
         {    
+            margin-right: 10px;
             font-size: 17px;
             @include phone
             {
                 font-size: 10px;
-                padding-right: 3%;
             }
+        }
+        p
+        {
+            margin: 0;
         }
     }
     .knife

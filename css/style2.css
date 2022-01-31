@@ -400,15 +400,26 @@ ul {
   text-decoration: none;
   color: #fff;
 }
+.bas_de_page li {
+  display: flex;
+  align-items: center;
+}
 @media only screen and (min-width: 321px) and (max-width: 595px) {
   .bas_de_page li {
     margin-bottom: 2%;
   }
 }
+.bas_de_page li i {
+  margin-right: 10px;
+}
 @media only screen and (min-width: 321px) and (max-width: 595px) {
   .bas_de_page li i {
+    margin-right: 3px;
     padding-right: 3%;
   }
+}
+.bas_de_page li p {
+  margin: 0;
 }
 @media only screen and (min-width: 321px) and (max-width: 595px) {
   .bas_de_page .knife {

@@ -364,7 +364,7 @@ a.explore_button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 0;
+    margin-bottom: 8%;
   }
 }
 
@@ -511,6 +511,7 @@ a.explore_button:hover {
   color: #fff;
 }
 .bas_de_page li {
+  display: flex;
   margin-top: 2%;
 }
 @media only screen and (min-width: 321px) and (max-width: 595px) {
@@ -519,13 +520,16 @@ a.explore_button:hover {
   }
 }
 .bas_de_page li i {
+  margin-right: 10px;
   font-size: 17px;
 }
 @media only screen and (min-width: 321px) and (max-width: 595px) {
   .bas_de_page li i {
     font-size: 10px;
-    padding-right: 3%;
   }
+}
+.bas_de_page li p {
+  margin: 0;
 }
 @media only screen and (min-width: 321px) and (max-width: 595px) {
   .bas_de_page .knife {

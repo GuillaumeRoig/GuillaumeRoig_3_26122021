@@ -346,16 +346,24 @@ ul
     }
     li
     {
+        display: flex;
+        align-items: center;
         @include phone
         {
             margin-bottom: 2%;
         }
         i
         {
+            margin-right: 10px;
             @include phone
             {
+                margin-right: 3px;
                 padding-right: 3%;
             }   
+        }
+        p
+        {
+            margin: 0;
         }
     }
     .knife
