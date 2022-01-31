@@ -138,7 +138,7 @@ header {
   align-items: baseline;
   font-size: 20px;
 }
-@media only screen and (min-width: 596px) and (max-width: 1180px) {
+@media only screen and (min-width: 596px) and (max-width: 1328px) {
   .location {
     box-shadow: 0px -3px 2px #d6d6d6;
     font-family: "Roboto", sans-serif;
@@ -264,7 +264,7 @@ a.explore_button:hover {
   display: flex;
   justify-content: space-around;
 }
-@media only screen and (min-width: 596px) and (max-width: 1180px) {
+@media only screen and (min-width: 596px) and (max-width: 1328px) {
   .functioning_item {
     display: flex;
     flex-direction: column;
@@ -365,7 +365,7 @@ a.explore_button:hover {
   justify-content: space-around;
   margin-bottom: 3%;
 }
-@media only screen and (min-width: 596px) and (max-width: 1180px) {
+@media only screen and (min-width: 596px) and (max-width: 1328px) {
   .restaurant ul {
     display: flex;
     flex-wrap: wrap;

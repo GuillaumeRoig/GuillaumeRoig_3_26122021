@@ -224,7 +224,7 @@ ul {
   display: flex;
   justify-content: space-evenly;
 }
-@media only screen and (min-width: 596px) and (max-width: 1180px) {
+@media only screen and (min-width: 596px) and (max-width: 1328px) {
   ul {
     display: flex;
     flex-direction: column;
@@ -380,7 +380,7 @@ ul {
   padding-left: 0;
   margin-bottom: 5%;
 }
-@media only screen and (min-width: 596px) and (max-width: 1180px) {
+@media only screen and (min-width: 596px) and (max-width: 1328px) {
   .bas_de_page ul {
     display: flex;
   }
