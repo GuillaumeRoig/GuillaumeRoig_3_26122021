@@ -254,7 +254,7 @@ ul {
   overflow: hidden;
   transition: padding-right 400ms ease-in-out;
 }
-.card:hover {
+.card:hover .card_body {
   padding-right: 75px;
 }
 .card:hover .card_check {
@@ -290,6 +290,11 @@ ul {
     font-size: 15px;
   }
 }
+.card .body_price p {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
 .card_check {
   display: flex;
@@ -313,6 +318,7 @@ ul {
 }
 
 .order {
+  font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
 }

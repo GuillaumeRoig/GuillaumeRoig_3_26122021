@@ -207,7 +207,7 @@ ul
     text-overflow: ellipsis;
     overflow: hidden;
     transition: padding-right 400ms ease-in-out;
-    &:hover {
+    &:hover .card_body {
       padding-right: 75px;
     }
     &:hover .card_check {
@@ -242,6 +242,12 @@ ul
             {
                 font-size: 15px
             }
+            p
+            {
+                margin: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
     }
 }
 .card_check
@@ -268,6 +274,7 @@ ul
 
 .order
 {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     &_button
