@@ -419,7 +419,8 @@ a.explore_button:hover {
 .card_body {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-left: 3%;
 }
 .card_title h3 {
   font-size: 20px;
